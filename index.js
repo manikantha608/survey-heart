@@ -23,7 +23,9 @@ app.use("/api", saleRoutes);
 
 app.use("/api/uploads", express.static(path.join(__dirname, "uploads")));
 
- app.use("/",saleRoutes)
+ app.use("/",(req,res)=>{
+  res.send("Sales Lead Management System")
+ })
 // Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
