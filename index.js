@@ -23,7 +23,7 @@ app.use("/api", saleRoutes);
 
 app.use("/api/uploads", express.static(path.join(__dirname, "uploads")));
 
- 
+ app.use("/",saleRoutes)
 // Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
